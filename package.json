@@ -5,10 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prebuild": "rm -rf node_modules && npm ci && (chmod +x node_modules/.bin/* || true)",
+    "build": "node ./node_modules/vite/bin/vite.js build"
   },
+  "engines": { "node": "20.x" },
+
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@gsap/react": "^2.1.2",
@@ -36,6 +39,6 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.18",
     "globals": "^15.14.0",
-    "vite": "^6.1.0"
+    "vite": "^5.0.0"
   }
 }
