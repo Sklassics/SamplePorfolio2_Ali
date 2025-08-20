@@ -3,7 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-"scripts": {
+
+  "scripts": {
     "dev": "vite",
     "prebuild": "rm -rf node_modules && npm ci && (chmod +x node_modules/.bin/* || true)",
     "build": "node ./node_modules/vite/bin/vite.js build",
